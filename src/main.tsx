@@ -1,16 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import { AuthProvider } from "react-ecosistema-unp/utils";
+import { EcoProvider } from "react-ecosistema-unp/utils";
 import App from "./App";
-///LOLO clonando repositorio con ssh//
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
-      <AuthProvider>
+      <EcoProvider>
         <App />
-      </AuthProvider>
+      </EcoProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
