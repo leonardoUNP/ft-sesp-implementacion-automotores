@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import { EcoProvider } from "react-ecosistema-unp/utils";
 import App from "./App";
 
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
