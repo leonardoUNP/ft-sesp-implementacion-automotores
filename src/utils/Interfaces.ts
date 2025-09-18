@@ -1,8 +1,10 @@
 export interface Icolumns {
-    key: string
-    label: string,
-    hasModal?: boolean
-
+    key: string;
+    label: string;
+    hasModal?: boolean;
+    truncateText?: boolean;
+    sorter?: boolean;
+    renderComponent?: (row: Record<string, any>) => React.ReactNode;
 }
 
 export interface Analista {

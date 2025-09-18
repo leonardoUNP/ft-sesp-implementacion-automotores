@@ -1,0 +1,86 @@
+.tab-content {
+    height: fit-content !important;
+}
+
+.nav {
+    background-color: transparent;
+}
+
+.table-scroll {
+    max-height: 63vh !important;
+}
+
+/*Contenedor de los switch*/
+.bg-section {
+    background-color: #f7f7f7;
+    padding: 1.2rem 1rem;
+    border-radius: 10px;
+}
+
+/*Tarjeta desplegable*/
+.item_container_datos {
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    padding: 0 1rem 0.3rem;
+    margin: 1rem 0;
+    transition: 'box-shadow 0.3s ease',
+}
+
+.tittle-container-modal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.boton-desplegable {
+    background-color: transparent !important;
+    font-size: 25px !important;
+    color: #303d50;
+    margin-top: 4px;
+}
+
+.boton-desplegable:hover {
+    color: #697586;
+    transition: all 0.3s ease-in-out;
+}
+
+/*Tabs*/
+.modern-tabs {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.tab-selector {
+    display: flex;
+    gap: 0.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+    width: 100%;
+}
+
+.pill-tab {
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: #f3f3f3;
+    border: none;
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.pill-tab.active {
+    background-color: #d7eaff;
+    color: #2f7bc2;
+}
+
+.tab-content {
+    margin-top: 1rem;
+    overflow-x: hidden;
+    position: relative;
+}

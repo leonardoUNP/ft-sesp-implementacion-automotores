@@ -1,10 +1,29 @@
 import { TablaRegistros } from "react-ecosistema-unp/tables"
-import { columnsHistorialDeVehiculos } from "../../utils/Constants"
 import { InfoSolicitante } from "../modales/InfoSolicitante"
 import data from '../../services/HistorialDeVehiculos.json'
+import { TipoSolicitud } from "../../shared/TipoDeSolicitud"
+import type { Analista } from "../../utils/Interfaces"
+
+
 
 TablaRegistros
 export const TablaAlistamientoControlVehiculos = () => {
+
+    const columnsHistorialDeVehiculos: any[] = [
+        {
+            key: "tipo_solicitud",
+            label: "Gestión",
+            renderComponent: (rowData: Analista) => (
+                <TipoSolicitud solicitud={rowData.tipo_solicitud ?? ""} />
+            ),
+        },
+        { key: "numero_resolucion", label: "Número Resolución" },
+        { key: "nombre_analista", label: "Nombre del Beneficiario" },
+        { key: "identificacion", label: "Identificación", hasModal: true },
+        { key: "tipo_vehiculo", label: "Tipo de Vehiculo" },
+        { key: "departamento", label: "Departamento" },
+        { key: "municipio", label: "Municipio" },
+    ];
 
     const renderModalContent = (row: any, column: any) => {
         switch (column.key) {
