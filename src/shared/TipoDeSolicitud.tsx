@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { FaCar, FaTruck, FaExchangeAlt, FaQuestionCircle } from "react-icons/fa";
+import { FaCar, FaExchangeAlt, FaQuestionCircle } from "react-icons/fa";
+import { FaCarOn } from "react-icons/fa6";
 
 type TipoSolicitudValue = string | number | null;
 
@@ -11,12 +12,12 @@ const solicitudMap: Record<string | number, { icon: React.ElementType; color: st
 
     "Cambio de vehículo": { icon: FaExchangeAlt, color: "#1976d2", tooltipText: "Cambio de vehículo" },
     "Implementacion por primera vez": { icon: FaCar, color: "#8E24AA", tooltipText: "Implementación por primera vez" },
-    "Vehículo sustituto": { icon: FaTruck, color: "#3B82F6", tooltipText: "Vehículo sustituto" },
+    "Vehículo sustituto": { icon: FaCarOn, color: "#3B82F6", tooltipText: "Vehículo sustituto" },
 
 
     1: { icon: FaExchangeAlt, color: "#1976d2", tooltipText: "Cambio de vehículo" },
     2: { icon: FaCar, color: "#8E24AA", tooltipText: "Implementación por primera vez" },
-    3: { icon: FaTruck, color: "#3B82F6", tooltipText: "Vehículo sustituto" },
+    3: { icon: FaCarOn, color: "#3B82F6", tooltipText: "Vehículo sustituto" },
 };
 
 export const TipoSolicitud: React.FC<TipoSolicitudProps> = ({ solicitud }) => {

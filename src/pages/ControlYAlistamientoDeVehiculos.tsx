@@ -9,7 +9,7 @@ export const ControlYAlistamientoDeVehiculos: React.FC = () => {
     const [activeKey, setActiveKey] = useState<"Alistamiento" | "Rentadora">("Alistamiento");
     const breadcrumbItems = [
         { label: "Inicio", link: "/" },
-        { label: "Administrador de equipos" }
+        { label: "Control y Alistamiento de Vehículos" }
     ];
 
     return (
@@ -20,6 +20,7 @@ export const ControlYAlistamientoDeVehiculos: React.FC = () => {
                     activeKey={activeKey}
                     onSelect={(k) => setActiveKey(k as "Alistamiento" | "Rentadora")}
                     className="mb-3"
+                    style={{ background: '#ffffff' }}
                 >
 
                     <Tab eventKey="Alistamiento" title="Historial de Vehículo">
