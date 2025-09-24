@@ -29,7 +29,14 @@ export interface Analista {
     fec_resolucion: string;
     dia_solicitud: string;
     tipo_vehiculo: string;
+    tipo_medida: string;
     tipo_esquema: string;
+    numero_personal_proteccion: string;
+    apoyo_rehubicacion_temporal: string;
+    vehiculos_asignados: string;
+    nivel_blindaje: string;
+    enfoque_genero: string;
+    sub_poblacion: string
 }
 
 export interface AnalistaProps {

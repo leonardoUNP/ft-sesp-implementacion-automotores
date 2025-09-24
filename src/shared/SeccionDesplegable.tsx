@@ -54,12 +54,14 @@ const SeccionDesplegable: React.FC<SeccionDesplegableProps> = ({
                 <Form className='text-start py-3'>
                     <Table striped responsive>
                         <tbody>
-                            {datos.map((item, index) => (
-                                <tr key={index}>
-                                    <th className='text-start'>{item.label}</th>
-                                    <td className='text-start'>{item.value}</td>
-                                </tr>
-                            ))}
+                            {datos
+                                .filter(item => item.value !== null && item.value !== undefined && item.value !== '')
+                                .map((item, index) => (
+                                    <tr key={index}>
+                                        <th className='text-start'>{item.label}</th>
+                                        <td className='text-start'>{item.value}</td>
+                                    </tr>
+                                ))}
                         </tbody>
                     </Table>
                 </Form>

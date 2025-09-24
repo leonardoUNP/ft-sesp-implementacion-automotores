@@ -21,14 +21,16 @@ export const TablaAlistamientoControlVehiculos = () => {
         { key: "numero_resolucion", label: "Número Resolución", hasModal: true },
         { key: "nombre_analista", label: "Nombre del Beneficiario" },
         { key: "identificacion", label: "Identificación", hasModal: true },
-        { key: "tipo_vehiculo", label: "Tipo de Vehiculo" },
+        // { key: "tipo_vehiculo", label: "Tipo de Vehiculo" },
         { key: "departamento", label: "Departamento" },
         { key: "municipio", label: "Municipio" },
     ];
 
     const renderModalContent = (row: any, column: any) => {
+        console.log('heyy')
         switch (column.key) {
             case "identificacion":
+
                 return <InfoSolicitante data={row}></InfoSolicitante>;
                 break;
             case "numero_resolucion":

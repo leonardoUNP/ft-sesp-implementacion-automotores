@@ -20,32 +20,16 @@
         "numero_resolucion": "MTSP 123456 DEL 10 DE ENERO DE 2020",
         "fec_resolucion": "2024-10-12",
         "dia_solicitud": "Martes",
-        "tipo_vehiculo": "Sedan",
-        "tipo_esquema": "C"
-    },
-    {
-        "nombre_analista": "Luis Ramírez",
-        "identificacion": "1023456789",
-        "vinculacion": "Contratista",
-        "experiencia": "8 años",
-        "nivel_academico": "Doctorado",
-        "profesion": "Abogado",
-        "genero": "Masculino",
-        "fecha_ingreso_ser": "2016-05-10",
-        "departamento": "Antioquia",
-        "municipio": "Medellín",
-        "revisor_asignado": "María Fernández",
-        "correo_electronico": "luis.ramirez@unp.gov.co",
-        "celular": 3105678901,
-        "fec_ultimo_año": "2024-01-20",
-        "numero_ot_abiertas": 20,
-        "numero_ot_cerradas": 4,
-        "tipo_solicitud": "Implementacion por primera vez",
-        "numero_resolucion": "MTSP 654321 DEL 25 DE FEBRERO DE 2020",
-        "fec_resolucion": "2024-10-12",
-        "dia_solicitud": "Viernes",
-        "tipo_vehiculo": "SUV",
-        "tipo_esquema": "D"
+        "tipo_medida":"Esquema de protección",
+        "tipo_esquema": "ETL",
+        "vehiculos_asignados":"",
+        "nivel_blindaje":"",
+        "numero_personal_proteccion":"1",
+        "apoyo_rehubicacion_temporal":"2 SMMLV/mes",
+        "enfoque_genero":"Mujer cabeza de hogar",
+        "sub_poblacion":"Integrantes del nuevo Movimiento o Partido Político que surja del tránsito de las FARC-EP a la actividad político legal."
+
+
     },
     {
         "nombre_analista": "María González",
@@ -68,8 +52,45 @@
         "numero_resolucion": "MTSP 987654 DEL 7 DE MARZO DE 2020",
         "fec_resolucion": "2023-05-20",
         "dia_solicitud": "Lunes",
-        "tipo_vehiculo": "Crossover",
-        "tipo_esquema": "A"
+        "tipo_medida":"Esquema de protección",
+        "tipo_esquema": "tipo 4",
+        "vehiculos_asignados":"2",
+        "nivel_blindaje":"IV",
+        "numero_personal_proteccion":"2",
+        "enfoque_genero":"Mujer cabeza de hogar",
+        "sub_poblacion":"Antiguos integrantes de las FARC-EP que se reincorporen a la vida civil."
+
+
+
+        
+    },
+    {
+        "nombre_analista": "Luis Ramírez",
+        "identificacion": "1023456789",
+        "vinculacion": "Contratista",
+        "experiencia": "8 años",
+        "nivel_academico": "Doctorado",
+        "profesion": "Abogado",
+        "genero": "Masculino",
+        "fecha_ingreso_ser": "2016-05-10",
+        "departamento": "Antioquia",
+        "municipio": "Medellín",
+        "revisor_asignado": "María Fernández",
+        "correo_electronico": "luis.ramirez@unp.gov.co",
+        "celular": 3105678901,
+        "fec_ultimo_año": "2024-01-20",
+        "numero_ot_abiertas": 20,
+        "numero_ot_cerradas": 4,
+        "tipo_solicitud": "Implementacion por primera vez",
+        "numero_resolucion": "MTSP 654321 DEL 25 DE FEBRERO DE 2020",
+        "fec_resolucion": "2024-10-12",
+        "dia_solicitud": "Viernes",
+        "tipo_medida":"Esquema de protección",
+        "tipo_esquema": "tipo 2",
+        "vehiculos_asignados":"1",
+        "nivel_blindaje":"III-A"
+        
+        
     },
     {
         "nombre_analista": "Carlos Mendoza",
@@ -92,7 +113,6 @@
         "numero_resolucion": "MTSP 345678 DEL 19 DE ABRIL DE 2020",
         "fec_resolucion": "2022-08-15",
         "dia_solicitud": "Miércoles",
-        "tipo_vehiculo": "SUV",
         "tipo_esquema": "B"
     },
     {
@@ -116,8 +136,10 @@
         "numero_resolucion": "MTSP 112233 DEL 30 DE MAYO DE 2020",
         "fec_resolucion": "2021-12-10",
         "dia_solicitud": "Jueves",
-        "tipo_vehiculo": "Sedan",
-        "tipo_esquema": "E"
+        "tipo_esquema": "E",
+        "enfoque_genero":"Mujer cabeza de hogar",
+        "sub_poblacion":"Familias de todos los anteriores de acuerdo con el nivel de riesgo."
+
     },
     {
         "nombre_analista": "Andrés Castro",

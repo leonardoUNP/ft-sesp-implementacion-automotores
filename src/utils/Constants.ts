@@ -27,7 +27,7 @@ export const datosEvaluado = [
     [
         { label: "Fecha Solicitud UNP", value: dataReparto.fechaSolicitudUNP },
         { label: "Fecha Recepción SESP", value: dataReparto.fechaReciboER },
-        { label: "Fecha Asignación OT", value: dataReparto.fechaExpedicion },
+        { label: "Tipo Resolución", value: dataReparto.tipo_solicitud },
     ],
 ];
 
