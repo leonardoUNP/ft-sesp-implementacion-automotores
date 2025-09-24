@@ -53,11 +53,6 @@ export const dataGeneral: Section[] = [
         icon: FaUserShield,
         items: datosEvaluado,
     },
-    {
-        title: "Datos del Analista de Riesgo",
-        icon: FaUserEdit,
-        items: datosAnalista,
-    },
 ];
 
 export { dataReparto }
