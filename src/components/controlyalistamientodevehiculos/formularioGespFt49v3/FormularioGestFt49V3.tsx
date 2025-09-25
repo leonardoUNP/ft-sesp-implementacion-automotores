@@ -9,6 +9,7 @@ import { initialConsentimientoData } from "../forms/consentimiento/utils/initial
 import { useNavigate } from "react-router-dom";
 import { Paginador } from 'react-ecosistema-unp/ui'
 import Swal from "sweetalert2";
+import { DescripcionVehiculo } from "../forms/consentimiento/components/DescripcionVehiculo";
 
 
 
@@ -87,6 +88,9 @@ export const FormularioGestFt49V3 = () => {
                         handleFieldChange={handleFieldChange}
                         updateFormData={(field, value) => setFormData((prevState: any) => ({ ...prevState, [field]: value }))}
                     />
+                </ExpandableCard>
+                <ExpandableCard title="DESCRIPCIÓN DEL VEHÍCULO">
+                    <DescripcionVehiculo />
                 </ExpandableCard>
             </>
 
