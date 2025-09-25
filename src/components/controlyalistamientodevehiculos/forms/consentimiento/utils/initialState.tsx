@@ -5,4 +5,23 @@ export const initialConsentimientoData: any = {
     ubicacion: "",
     ruralFields: {},
     urbanaFields: {},
+    vehiculeDescription: {
+        placa: "",
+        marca: "",
+        linea: "",
+        modelo: "",
+        cilindraje: "",
+        color: "",
+        clase_vehiculo: "",
+        tipo_carroceria: "",
+        combustible: "",
+        capacidad: "",
+        potencia: "",
+        numero_puertas: "",
+        licencia_trancito: "",
+        fecha_vencimiento_socat: "",
+        aseguradora_soat: "",
+        kilometraje_actual: "",
+        kilometraje_debe_mantenimiento: "",
+    }
 }

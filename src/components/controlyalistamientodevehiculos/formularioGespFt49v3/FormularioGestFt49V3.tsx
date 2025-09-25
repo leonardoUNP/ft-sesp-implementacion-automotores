@@ -89,8 +89,13 @@ export const FormularioGestFt49V3 = () => {
                         updateFormData={(field, value) => setFormData((prevState: any) => ({ ...prevState, [field]: value }))}
                     />
                 </ExpandableCard>
-                <ExpandableCard title="DESCRIPCIÓN DEL VEHÍCULO">
-                    <DescripcionVehiculo />
+                <ExpandableCard title="Description del vehículo">
+                    <DescripcionVehiculo
+                        formData={formData}
+                        handleChange={handleChange}
+                        handleFieldChange={handleFieldChange}
+                        updateFormData={(field, value) => setFormData((prevState: any) => ({ ...prevState, [field]: value }))}
+                    />
                 </ExpandableCard>
             </>
 

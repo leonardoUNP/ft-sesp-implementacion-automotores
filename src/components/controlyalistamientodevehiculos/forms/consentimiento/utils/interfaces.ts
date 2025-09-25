@@ -45,7 +45,7 @@ export interface IVehiculeDescription {
         combustible: string;
         capacidad: string;
         potencia: string;
-        puertas: string
+        numero_puertas: string
         licencia_trancito: string;
         fecha_vencimiento_socat: string;
         aseguradora_soat: string;
