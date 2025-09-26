@@ -61,4 +61,31 @@ export interface IDatosVehiculeDescription {
     updateFormData: (field: string, value: any) => void;
 }
 
-//¡Fin! Inicio interface formualrio LISTA CHEQUEO DE VEHÍCULOS BLINDADOS Y CONVENCIONALES 
+export interface VehiculoField {
+    label: string;
+    name: string;
+    placeholder?: string;
+    maxLength?: number;
+    md?: number;
+}
+export interface DescripcionVehiculoProps {
+    fields: VehiculoField[];
+    values: Record<string, string>;
+    onChange: (name: string, value: string) => void;
+}
+
+//¡Fin! Inicio interface formualrio LISTA CHEQUEO DE VEHÍCULOS BLINDADOS Y CONVENCIONALES
+
+export interface BlindajeDetalle {
+    label: string;
+    name: string;
+    options: Array<{ label: string; value: string }>;
+}
+
+
+export interface DescripcionBlindajeProps {
+    detalles: BlindajeDetalle[];
+    onChange?: (name: string, value: string) => void;
+    values?: Record<string, string>;
+}
+

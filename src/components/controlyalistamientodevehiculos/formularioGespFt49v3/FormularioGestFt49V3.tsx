@@ -10,6 +10,10 @@ import { useNavigate } from "react-router-dom";
 import { Paginador } from 'react-ecosistema-unp/ui'
 import Swal from "sweetalert2";
 import { DescripcionVehiculo } from "../forms/consentimiento/components/DescripcionVehiculo";
+import { DescripcionBlindaje } from "../forms/consentimiento/components/descripcionBlindaje/DescripcionBlindaje";
+import { GiLayeredArmor } from "react-icons/gi";
+import { detallesBlindaje, sistemaElectrico } from "../forms/consentimiento/utils/constants";
+
 
 
 
@@ -76,6 +80,13 @@ export const FormularioGestFt49V3 = () => {
 
 
 
+
+
+
+    const handleBlindajeChange = (name: string, value: string) => {
+        setFormData((prev: any) => ({ ...prev, [name]: value }));
+    };
+
     const paginas = [{
         label: 'Información General',
         icon: FaUserShield,
@@ -100,7 +111,20 @@ export const FormularioGestFt49V3 = () => {
             </>
 
         )
-    }]
+    }, {
+        label: "Inspección de Vehiculo",
+        icon: GiLayeredArmor,
+        content: (
+            <ExpandableCard title="Inspeccion de vehículo">
+                <DescripcionBlindaje
+                    detalles={detallesBlindaje}
+                    values={formData}
+                    onChange={handleBlindajeChange}
+                />
+            </ExpandableCard>
+        )
+    },
+    ]
 
     return (
         <div>

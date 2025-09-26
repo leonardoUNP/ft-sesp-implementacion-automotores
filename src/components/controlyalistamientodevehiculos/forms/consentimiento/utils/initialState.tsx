@@ -23,5 +23,6 @@ export const initialConsentimientoData: any = {
         aseguradora_soat: "",
         kilometraje_actual: "",
         kilometraje_debe_mantenimiento: "",
-    }
+    },
+    blindaje: {}
 }
