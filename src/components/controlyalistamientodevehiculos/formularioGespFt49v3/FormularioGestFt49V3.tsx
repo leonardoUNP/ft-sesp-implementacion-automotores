@@ -10,9 +10,12 @@ import { useNavigate } from "react-router-dom";
 import { Paginador } from 'react-ecosistema-unp/ui'
 import Swal from "sweetalert2";
 import { DescripcionVehiculo } from "../forms/consentimiento/components/DescripcionVehiculo";
-import { DescripcionBlindaje } from "../forms/consentimiento/components/descripcionBlindaje/DescripcionBlindaje";
+import { InspeccionVehiculo } from "../forms/consentimiento/components/inspeccionVehiculo/InspeccionVehiculo";
 import { GiLayeredArmor } from "react-icons/gi";
-import { detallesBlindaje, sistemaElectrico } from "../forms/consentimiento/utils/constants";
+// import { detallesBlindaje, sistemaElectrico } from "../forms/consentimiento/utils/constants";
+import { inspeccionVehiculo } from "../forms/consentimiento/utils/constants";
+import Carrusel from "../../../shared/carrusel";
+import { DescripcionBlindaje } from "../forms/consentimiento/components/descripcionBlindaje/DescripcionBlindaje";
 
 
 
@@ -23,6 +26,8 @@ export const FormularioGestFt49V3 = () => {
     const [formData, setFormData] = useState(initialConsentimientoData);
     const [_validated, setValidated] = useState(false);
     const navigate = useNavigate();
+
+
 
     const handleChange = (e: React.ChangeEvent<any>) => {
         const { name, value, type, checked } = e.target;
@@ -83,8 +88,15 @@ export const FormularioGestFt49V3 = () => {
 
 
 
-    const handleBlindajeChange = (name: string, value: string) => {
-        setFormData((prev: any) => ({ ...prev, [name]: value }));
+    // Maneja los cambios en los detalles de cada sección
+    const handleDetalleChange = (section: string, name: string, value: string) => {
+        setFormData((prev: any) => ({
+            ...prev,
+            [section]: {
+                ...prev[section],
+                [name]: value
+            }
+        }));
     };
 
     const paginas = [{
@@ -112,15 +124,36 @@ export const FormularioGestFt49V3 = () => {
 
         )
     }, {
+        label: 'Descripción de blindaje',
+        icon: FaUserShield,
+        content: (
+            <>
+                <ExpandableCard title="Description del vehículo">
+                    <DescripcionBlindaje
+                        formData={formData}
+                        handleChange={handleChange}
+                    />
+                </ExpandableCard>
+            </>
+
+        )
+    }, {
         label: "Inspección de Vehiculo",
         icon: GiLayeredArmor,
         content: (
-            <ExpandableCard title="Inspeccion de vehículo">
-                <DescripcionBlindaje
-                    detalles={detallesBlindaje}
-                    values={formData}
-                    onChange={handleBlindajeChange}
-                />
+            <ExpandableCard title="Inspección de vehículo">
+                <Carrusel delay={500} goToLastSlideOnChildrenCountChange={true}>
+                    {inspeccionVehiculo.map((seccion) => (
+                        <div key={seccion.item} className="mb-3 p-3 border border-gray-300 rounded-3">
+                            <h5 className="mb-3">{seccion.item}</h5>
+                            <InspeccionVehiculo
+                                detalles={seccion.detalles}
+                                values={formData[seccion.item] || {}}
+                                onChange={(name, value) => handleDetalleChange(seccion.item, name, value)}
+                            />
+                        </div>
+                    ))}
+                </Carrusel>
             </ExpandableCard>
         )
     },

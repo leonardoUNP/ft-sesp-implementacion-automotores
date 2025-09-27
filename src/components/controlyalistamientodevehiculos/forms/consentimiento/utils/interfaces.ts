@@ -76,16 +76,30 @@ export interface DescripcionVehiculoProps {
 
 //¡Fin! Inicio interface formualrio LISTA CHEQUEO DE VEHÍCULOS BLINDADOS Y CONVENCIONALES
 
-export interface BlindajeDetalle {
+
+export interface DetalleItem {
     label: string;
     name: string;
     options: Array<{ label: string; value: string }>;
 }
 
 
-export interface DescripcionBlindajeProps {
-    detalles: BlindajeDetalle[];
+
+export interface InspeccionBlindajeProps {
+    detalles: Array<{
+        label: string;
+        name: string;
+        options: Array<{ label: string; value: string }>;
+    }>;
     onChange?: (name: string, value: string) => void;
     values?: Record<string, string>;
+    itemName?: string;
 }
+
+export interface DescripcionBlindajeProps {
+    formData: any;
+    handleChange: (e: React.ChangeEvent<any>) => void;
+}
+
+
 

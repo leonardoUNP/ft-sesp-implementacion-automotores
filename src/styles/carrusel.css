@@ -1,0 +1,23 @@
+.carrusel .swiper-slide {
+    overflow: visible !important;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+.carrusel .swiper-wrapper {
+    overflow: visible !important;
+}
+
+.carrusel .swiper-pagination {
+    position: relative;
+    margin-top: 0.5rem;
+}
+
+.carrusel .swiper-pagination-bullet {
+    background-color: #ccc;
+    opacity: 1;
+}
+
+.carrusel .swiper-pagination-bullet-active {
+    background-color: #303D50;
+}
